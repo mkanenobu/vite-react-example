@@ -1,49 +1,22 @@
-import { useState } from "react";
-import logo from "../assets/logo.svg";
-import styles from "./App.module.scss";
+import React from "react";
+import { Router, ReactLocation } from "react-location";
+import { paths } from "./paths";
+import { Layout } from "./components/Layout";
+import { Home } from "./pages/Home";
+import { Settings } from "./pages/Settings";
 
-function App() {
-  const [count, setCount] = useState(0);
+const reactLocation = new ReactLocation();
 
+export const App: React.VFC = () => {
   return (
-    <div className={styles.app}>
-      <header className={styles.appHeader}>
-        <img src={logo} className={styles.appLogo} alt="logo" />
-        <p>Hello Vite + React!</p>
-        <p>
-          <button
-            type="button"
-            className={styles.button}
-            onClick={() => setCount((count) => count + 1)}
-          >
-            count is: {count}
-          </button>
-        </p>
-        <p>
-          Edit <code>App.tsx</code> and save to test HMR updates.
-        </p>
-        <p>
-          <a
-            className={styles.appLink}
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-          {" | "}
-          <a
-            className={styles.appLink}
-            href="https://vitejs.dev/guide/features.html"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Vite Docs
-          </a>
-        </p>
-      </header>
-    </div>
+    <Layout>
+      <Router
+        location={reactLocation}
+        routes={[
+          { id: "Home", path: paths.home, element: <Home /> },
+          { id: "Settings", path: paths.settings, element: <Settings /> },
+        ]}
+      />
+    </Layout>
   );
-}
-
-export default App;
+};

@@ -1,0 +1,32 @@
+.sideMenuContainer {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 180px;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  align-items: flex-start;
+  border-right: 1px solid gray;
+}
+
+.sideMenuItem {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4px 0;
+}
+
+.closeIcon {
+  height: 32px;
+  width: 32px;
+  cursor: pointer;
+}
+
+.menuIcon {
+  margin-right: 4px;
+  height: 24px;
+  width: 24px;
+}
