@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-location";
 import styles from "./SideMenu.module.scss";
 import {
   AiOutlineHome,
@@ -40,10 +41,10 @@ export const SideMenu: React.VFC<SideMenuProps> = (props) => {
       />
 
       {menus.map((menu) => (
-        <a key={menu.name} href={menu.url} className={styles.sideMenuItem}>
+        <Link key={menu.name} to={menu.url} className={styles.sideMenuItem}>
           {menu.icon}
           {menu.name}
-        </a>
+        </Link>
       ))}
     </div>
   );
