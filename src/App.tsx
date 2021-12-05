@@ -2,8 +2,6 @@ import React from "react";
 import { Router, ReactLocation, Outlet } from "react-location";
 import { paths } from "./paths";
 import { Layout } from "./components/Layout";
-import { Home } from "./pages/Home";
-import { Settings } from "./pages/Settings";
 
 const reactLocation = new ReactLocation();
 
@@ -14,8 +12,17 @@ export const App: React.VFC = () => {
         <Router
           location={reactLocation}
           routes={[
-            { id: "Home", path: paths.home, element: <Home /> },
-            { id: "Settings", path: paths.settings, element: <Settings /> },
+            {
+              id: "Home",
+              path: paths.home,
+              element: () => import("./pages/Home").then((mod) => <mod.Home />),
+            },
+            {
+              id: "Settings",
+              path: paths.settings,
+              element: () =>
+                import("./pages/Settings").then((mod) => <mod.Settings />),
+            },
           ]}
         />
       </Layout>
