@@ -7,6 +7,7 @@ const reactLocation = new ReactLocation();
 
 export const App: React.VFC = () => {
   return (
+    // Outer router for context load
     <Router location={reactLocation} routes={[]}>
       <Layout>
         <Router
