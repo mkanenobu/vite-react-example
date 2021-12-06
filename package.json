@@ -8,12 +8,15 @@
     "serve": "vite preview"
   },
   "dependencies": {
+    "@react-three/fiber": "^7.0.21",
     "classnames": "^2.3.1",
     "react": "^18.0.0-beta-71d16750c-20211202",
     "react-dom": "^18.0.0-beta-71d16750c-20211202",
     "react-icons": "^4.3.1",
     "react-location": "^3.2.15",
-    "sass": "^1.44.0"
+    "sass": "^1.44.0",
+    "three": "^0.135.0",
+    "victory": "^36.2.0"
   },
   "devDependencies": {
     "@types/react": "^17.0.0",

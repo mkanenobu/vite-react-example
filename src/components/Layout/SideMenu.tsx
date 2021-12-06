@@ -5,6 +5,8 @@ import {
   AiOutlineHome,
   AiOutlineSetting,
   AiOutlineClose,
+  AiOutlinePieChart,
+  AiOutlineBoxPlot,
 } from "react-icons/all";
 import { paths } from "../../paths";
 
@@ -24,6 +26,16 @@ const menus: Menu[] = [
     name: "Settings",
     url: paths.settings,
     icon: <AiOutlineSetting className={styles.menuIcon} />,
+  },
+  {
+    name: "Three",
+    url: paths.three,
+    icon: <AiOutlineBoxPlot className={styles.menuIcon} />,
+  },
+  {
+    name: "Chart",
+    url: paths.chart,
+    icon: <AiOutlinePieChart className={styles.menuIcon} />,
   },
 ];
 
