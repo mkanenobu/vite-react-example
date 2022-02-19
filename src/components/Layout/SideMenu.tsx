@@ -7,6 +7,8 @@ import {
   AiOutlineClose,
   AiOutlinePieChart,
   AiOutlineBoxPlot,
+  AiOutlineLoading3Quarters,
+  AiOutlineCoffee,
 } from "react-icons/all";
 import { paths } from "../../paths";
 
@@ -36,6 +38,16 @@ const menus: Menu[] = [
     name: "Chart",
     url: paths.chart,
     icon: <AiOutlinePieChart className={styles.menuIcon} />,
+  },
+  {
+    name: "Suspense",
+    url: paths.data,
+    icon: <AiOutlineLoading3Quarters className={styles.menuIcon} />,
+  },
+  {
+    name: "Animation",
+    url: paths.animation,
+    icon: <AiOutlineCoffee className={styles.menuIcon} />,
   },
 ];
 

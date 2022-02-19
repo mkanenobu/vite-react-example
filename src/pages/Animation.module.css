@@ -1,0 +1,30 @@
+/* reset */
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+  appearance: none;
+}
+
+.button {
+  display: flex;
+  width: auto;
+}
+
+.button:after {
+  content: "";
+  position: relative;
+  left: -50%;
+  bottom: -20px;
+  display: inline-block;
+  width: 0;
+  height: 1px;
+  background-color: black;
+  transition: all 0.5s;
+}
+
+.button:hover:after {
+  width: 100px;
+}

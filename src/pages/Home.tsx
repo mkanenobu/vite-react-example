@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import logo from "../../assets/logo.svg";
-import styles from "./Home.module.scss"
+import styles from "./Home.module.scss";
 
 export const Home: React.VFC = () => {
   const [count, setCount] = useState(0);

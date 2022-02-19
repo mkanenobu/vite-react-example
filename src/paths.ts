@@ -3,4 +3,6 @@ export const paths = {
   settings: "/settings",
   three: "/three",
   chart: "/chart",
+  data: "/data",
+  animation: "/animation",
 };
